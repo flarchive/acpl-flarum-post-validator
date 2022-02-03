@@ -1,0 +1,54 @@
+{
+    "name": "acpl/flarum-post-validator",
+    "description": "Validates all posts in the database. Useful after migrating from other software to Flarum.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "flarum/core": "^1.0.0",
+        "ext-json": "*"
+    },
+    "authors": [
+        {
+            "name": "Rafał Całka",
+            "email": "rafal.calka@android.com.pl",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ACPL\\PostValidator\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Post Validator",
+            "icon": {
+                "name": "fas fa-check-double",
+                "color": "#fff",
+                "backgroundColor": "#0f9d58"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": false,
+                "js": false,
+                "jsCommon": false,
+                "css": false,
+                "locale": false,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}
